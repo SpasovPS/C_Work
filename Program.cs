@@ -18,3 +18,14 @@ do
     }
 } 
 while (str !="");
+string[] result = new string[array.Length];
+count = 0;
+foreach (string? value in array)
+{
+    if (value.Length <=3)
+    {
+        result[count] = value;
+        count++;
+    }
+}
+Console.WriteLine(string.Join(Environment.NewLine, result, 0, count));
